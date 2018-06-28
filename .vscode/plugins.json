@@ -1,0 +1,1 @@
+{"plugins":["cordova-plugin-whitelist","cordova-plugin-code-push","code-push","cordova-plugin-dialogs","cordova-plugin-device","cordova-plugin-contacts","cordova-sms-plugin","cordova-plugin-ble-central","cordova-plugin-camera","cordova-plugin-x-socialsharing","es6-promise-plugin","cordova-plugin-mauron85-background-geolocation"]}
