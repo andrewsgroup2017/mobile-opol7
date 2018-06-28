@@ -47,9 +47,7 @@ export default {
   created() {},
   methods: {
     test() {
-      console.log(user.uid);
-      console.log(this.$root.timestamp);
-      this.$fireDB("logs/" + user.uid).push({
+      this.$fireDB("logs/" + this.user.uid).push({
         eventType: "login",
         time: this.$root.timestamp
       });

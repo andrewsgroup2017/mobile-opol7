@@ -52,7 +52,6 @@ export default {
   created() {
     EventBus.$on("location-update", location => {
       try {
-        // console.log(location.time)
         var u = this.$root.user;
         console.log(u.uid);
         var lat = location.latitude;
@@ -63,31 +62,27 @@ export default {
             u.uid = "no_currentLoggedInUser";
           }
         }
-        var device_serial = device.serial;
-        return (result = window.firebase
+          // async function DBSave() {
+       var newPostKey =  window.firebase
           .database()
           .ref("logs")
           .push({
-            // this.$fireDB('logs').push({
-
             eventType: "position-update",
-            device_serial: device_serial,
             time: location.time,
             lat: lat,
             lng: lng,
             user: u.uid
-          }));
+        })
+        console.log(newPostKey)
       } catch (error) {
-        return error;
+        console.log(error)
       }
-      return "error";
     });
   },
   data: () => ({
     dialog: false,
     drawer: null,
     e2: 0,
-    // user: null,
     items: [
       {
         icon: "contacts",

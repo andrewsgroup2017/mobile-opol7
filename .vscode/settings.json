@@ -1,2 +1,5 @@
 {
+  "git.ignoreLimitWarning": true,
+  "eslint.trace.server": "verbose",
+  "vetur.trace.server": "messages"
 }

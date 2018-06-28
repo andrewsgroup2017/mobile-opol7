@@ -1,5 +1,5 @@
 /* Purpose: Exports function to sort an object by any property in ascending or descending order */
-
+/* eslint-disable */
 "use strict";
 
 module.exports = function(obj, sortBy, sortDesc) {
